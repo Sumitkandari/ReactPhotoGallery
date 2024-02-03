@@ -4,6 +4,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { doc, getDoc } from "firebase/firestore";
+import login from "../../images/login.jpg"
 
 const Login = () => {
   const [error, setError] = useState(false);
@@ -70,7 +71,7 @@ const Login = () => {
     <div className="login">
       <div className="login-img">
         <img
-          src="src\images\zarak-khan-v263clVYq-4-unsplash-1800x2700.jpg"
+          src={login}
           alt=""
         />
       </div>

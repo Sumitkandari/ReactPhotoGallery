@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { projectAuth, projectFireStore } from "../../firebase/config";
 import { doc, setDoc } from "firebase/firestore";
+import register from "../../images/register.jpg"
 
 const Register = () => {
   const [data, setData] = useState({
@@ -83,7 +84,7 @@ const Register = () => {
         <span className="regtologin">Have an account? <Link to="/login">login</Link></span>
       </div>
       <div className="register-img">
-        <img src="src\images\register-img.jpg" alt="" />
+        <img src={register} alt="" />
       </div>
     </div>
   );
