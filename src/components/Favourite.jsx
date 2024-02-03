@@ -42,7 +42,7 @@ const Favourite = ({ setSelectedImg }) => {
                   style={{ color: response.favourite ? "red" : "grey" }}
                   onClick={() => handleClick(response)}
                 />
-                <MdDelete className="icon2" onClick={() => handleDelete(doc)} />
+                <MdDelete className="icon2" onClick={() => handleDelete(response)} />
                 <motion.img
                   src={response.url}
                   alt="uploaded pic"
