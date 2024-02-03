@@ -1,21 +1,29 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateStateAsync } from "../Redux/Context";
+import { deleteStateAsync, updateStateAsync } from "../Redux/Context";
 import { FaHeart } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { AuthContext } from "../context/AuthContext";
+import { MdDelete } from "react-icons/md";
 const Favourite = ({ setSelectedImg }) => {
-  
   const data = useSelector((state) => state.root);
-  const {currentUser}=useContext(AuthContext)
+  const { currentUser } = useContext(AuthContext);
   console.log("Inside favourite", data);
   const dispatch = useDispatch();
   function handleClick(doc) {
     const temp = { ...doc };
     temp.favourite = temp.favourite ? false : true;
     console.log(doc);
-    dispatch(updateStateAsync({temp,uid:currentUser.uid}));
+    dispatch(updateStateAsync({ temp, uid: currentUser.uid }));
   }
+  function handleDelete(doc) {
+    const temp = { ...doc };
+    dispatch(deleteStateAsync({ temp, uid: currentUser.uid }));
+  }
+  useEffect(() => {
+    console.log("efect", docs);
+    if (docs) dispatch(add(docs));
+  }, [docs]);
   return (
     <div className="img-grid">
       {data &&
@@ -34,7 +42,7 @@ const Favourite = ({ setSelectedImg }) => {
                   style={{ color: response.favourite ? "red" : "grey" }}
                   onClick={() => handleClick(response)}
                 />
-
+                <MdDelete className="icon2" onClick={() => handleDelete(doc)} />
                 <motion.img
                   src={response.url}
                   alt="uploaded pic"
