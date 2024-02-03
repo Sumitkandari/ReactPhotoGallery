@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Favourite from "./components/Favourite";
 import {
   BrowserRouter,
+  HashRouter,
   Navigate,
   Route,
   Router,
@@ -25,7 +26,7 @@ function App() {
 
   return (
     <div className="App">
-     <BrowserRouter>
+     <HashRouter>
         <Routes>
           <Route path="/">
             <Route path="login" element={  <Login />} />
@@ -72,7 +73,7 @@ function App() {
           />
           <Route path="*" element={<Login />} />
         </Routes>
-      </BrowserRouter> 
+      </HashRouter> 
     </div>
   );
 }
