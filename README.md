@@ -10,4 +10,6 @@ The Photo Gallery Application built with ReactJS aims to provide users with a vi
 
 # Login Preview
    ![alt text]( https://github.com/Sumitkandari/ReactPhotoGallery/blob/main/Login.png)
-      
+# Register Preview
+   ![alt text]( https://github.com/Sumitkandari/ReactPhotoGallery/blob/main/Register.png)
+  
