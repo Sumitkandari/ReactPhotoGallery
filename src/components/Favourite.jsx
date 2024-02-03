@@ -17,13 +17,13 @@ const Favourite = ({ setSelectedImg }) => {
     dispatch(updateStateAsync({ temp, uid: currentUser.uid }));
   }
   function handleDelete(doc) {
-    const temp = { ...doc };
+    const temp = { ...doc};
     dispatch(deleteStateAsync({ temp, uid: currentUser.uid }));
   }
-  useEffect(() => {
-    console.log("efect", docs);
-    if (docs) dispatch(add(docs));
-  }, [docs]);
+  // useEffect(() => {
+  //   console.log("efect", docs);
+  //   if (docs) dispatch(add(docs));
+  // }, [docs]);
   return (
     <div className="img-grid">
       {data &&

@@ -26,6 +26,7 @@ export const deleteStateAsync=createAsyncThunk(
   async ({temp,uid})=>{
     const storeRef = doc(projectFireStore, "images",uid,'Photoes',temp.id);
     await deleteDoc(storeRef);
+    return temp;
   }
 )
 
