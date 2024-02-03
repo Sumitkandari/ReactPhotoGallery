@@ -7,3 +7,7 @@ The Photo Gallery Application built with ReactJS aims to provide users with a vi
 # Login Credentials
   username:test8@gmail.com
   password:test8@
+
+# Login Preview
+   ![alt text]( https://github.com/Sumitkandari/ReactPhotoGallery/blob/main/Login.png)
+      
