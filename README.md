@@ -6,4 +6,4 @@ The Photo Gallery Application built with ReactJS aims to provide users with a vi
 
 # Login Credentials
   username:test8@gmail.com
-  password:test8
+  password:test8@
